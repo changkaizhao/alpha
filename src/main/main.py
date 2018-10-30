@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Copyright © 2018, Alpha Inc. All rights reserved.
+# Author: XXX
+
+"""
+main module
+"""
+"""
+口算作业批改 服务入口
+"""
+
+import json
+import os
+import logging
+import logging.config
+import yaml
+
+import tornado.ioloop
+import tornado.web
+from tornado.options import options, parse_config_file
+
+
+CONFIG_PATH = ''
+DEV_MODE = True
+LOGGER_MODULE_NAME = '{0: <{width}}'.format('main', width=14)
+
+
+def normal_response(data):
+    return {"error": None, "data": data}
+
+
+class MainHandler(tornado.web.RequestHandler):
+    """ 暂时用于测试上传图片 """
+
+    def get(self):
+        logger = logging.getLogger(LOGGER_MODULE_NAME)
+        logger.info("get Main request!!!")
+        self.write('''
+                    <html>
+                      <head><title>Upload File</title></head>
+                      <body>
+                        <form action='kousuan' enctype="multipart/form-data" method='post' target="sub_iframe">
+                        <input type='file' name='uploadfile'/><br/>
+                        <input type='submit' value='submit'/>
+                        </form>
+
+                        <iframe name="sub_iframe"></iframe>
+                      </body>
+                    </html>
+                    ''')
+
+
+
+
+def make_app():
+    return tornado.web.Application([
+        (r"/", MainHandler),
+    ], debug=DEV_MODE)
+
+
+def get_config_path():
+    if DEV_MODE:
+        return os.path.join(os.path.dirname(os.path.realpath(__file__)), "app_conf.py")
+    else:
+        return os.path.join(os.path.dirname(os.path.realpath(__file__)), "prod_app_conf.py")
+
+
+if __name__ == "__main__":
+    if DEV_MODE:
+        log_conf_name = 'log_conf_dev.yaml'
+    else:
+        log_conf_name = 'log_conf.yaml'
+
+    logging_config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), log_conf_name)
+    logging.config.dictConfig(yaml.load(open(logging_config_path, 'r')))
+    logger = logging.getLogger(LOGGER_MODULE_NAME)
+    parse_config_file(get_config_path())
+    logger.info("START APP!")
+    app = make_app()
+    app.listen(options.port)
+    tornado.ioloop.IOLoop.current().start()
