@@ -1,6 +1,6 @@
 import logging
 import tornado
-from main.main import LOGGER_MODULE_NAME
+from main_module.main import LOGGER_MODULE_NAME
 
 class MainHandler(tornado.web.RequestHandler):
     """ 暂时用于测试上传图片 """

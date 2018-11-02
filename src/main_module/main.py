@@ -20,7 +20,7 @@ import tornado.ioloop
 import tornado.web
 from tornado.options import options, parse_config_file
 
-from main_module.handlers import MainHandler
+# from main_module.handlers import MainHandler
 
 from tic_tac_toe.config import settings
 from tic_tac_toe.game_manager import TicTacToeGameManager
@@ -46,7 +46,25 @@ def make_app():
          dict(game_manager=tic_tac_toe_game_manager))
     ], debug=DEV_MODE)
 
+class MainHandler(tornado.web.RequestHandler):
+    """ 暂时用于测试上传图片 """
 
+    def get(self):
+        logger = logging.getLogger(LOGGER_MODULE_NAME)
+        logger.info("get Main request!!!")
+        self.write('''
+                    <html>
+                      <head><title>Upload File</title></head>
+                      <body>
+                        <form action='kousuan' enctype="multipart/form-data" method='post' target="sub_iframe">
+                        <input type='file' name='uploadfile'/><br/>
+                        <input type='submit' value='submit'/>
+                        </form>
+
+                        <iframe name="sub_iframe"></iframe>
+                      </body>
+                    </html>
+                    ''')
 def get_config_path():
     if DEV_MODE:
         return os.path.join(os.path.dirname(os.path.realpath(__file__)), "app_conf.py")
