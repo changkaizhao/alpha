@@ -12,7 +12,7 @@ from tornado import gen
 
 from tic_tac_toe.game_manager import InvalidGameError
 
-logger = logging.getLogger("app")
+logger = logging.getLogger("Tic Tac Toe Handlers")
 
 
 class IndexHandler(RequestHandler):

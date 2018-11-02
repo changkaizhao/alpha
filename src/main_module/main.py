@@ -39,12 +39,12 @@ def make_app():
     tic_tac_toe_game_manager = TicTacToeGameManager()
 
     return tornado.web.Application([
-        (r"/", MainHandler),
-        # (r"/$", IndexHandler),
+        # (r"/", MainHandler),
+        (r"/$", IndexHandler),
         (r"/tic-tac-toe$", TicTacToeHandler),
         (r"/tic-tac-toe/ws$", TicTacToeSocketHandler,
          dict(game_manager=tic_tac_toe_game_manager))
-    ], debug=DEV_MODE)
+    ], debug=DEV_MODE,**settings)
 
 class MainHandler(tornado.web.RequestHandler):
     """ 暂时用于测试上传图片 """
@@ -65,7 +65,7 @@ class MainHandler(tornado.web.RequestHandler):
                       </body>
                     </html>
                     ''')
-                    
+
 def get_config_path():
     if DEV_MODE:
         return os.path.join(os.path.dirname(os.path.realpath(__file__)), "app_conf.py")
