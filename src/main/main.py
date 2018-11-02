@@ -39,8 +39,8 @@ def make_app():
     tic_tac_toe_game_manager = TicTacToeGameManager()
 
     return tornado.web.Application([
-        # (r"/", MainHandler),
-        (r"/$", IndexHandler),
+        (r"/", MainHandler),
+        # (r"/$", IndexHandler),
         (r"/tic-tac-toe$", TicTacToeHandler),
         (r"/tic-tac-toe/ws$", TicTacToeSocketHandler,
          dict(game_manager=tic_tac_toe_game_manager))
