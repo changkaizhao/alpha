@@ -65,6 +65,7 @@ class MainHandler(tornado.web.RequestHandler):
                       </body>
                     </html>
                     ''')
+                    
 def get_config_path():
     if DEV_MODE:
         return os.path.join(os.path.dirname(os.path.realpath(__file__)), "app_conf.py")
