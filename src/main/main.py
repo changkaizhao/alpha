@@ -22,6 +22,11 @@ from tornado.options import options, parse_config_file
 
 from main.handlers import MainHandler
 
+from tic_tac_toe.config import settings
+from tic_tac_toe.game_manager import TicTacToeGameManager
+from tic_tac_toe.handlers import IndexHandler, TicTacToeHandler, TicTacToeSocketHandler
+
+
 CONFIG_PATH = ''
 DEV_MODE = True
 LOGGER_MODULE_NAME = '{0: <{width}}'.format('main', width=14)
@@ -31,8 +36,14 @@ def normal_response(data):
     return {"error": None, "data": data}
 
 def make_app():
+    tic_tac_toe_game_manager = TicTacToeGameManager()
+
     return tornado.web.Application([
-        (r"/", MainHandler),
+        # (r"/", MainHandler),
+        (r"/$", IndexHandler),
+        (r"/tic-tac-toe$", TicTacToeHandler),
+        (r"/tic-tac-toe/ws$", TicTacToeSocketHandler,
+         dict(game_manager=tic_tac_toe_game_manager))
     ], debug=DEV_MODE)
 
 
