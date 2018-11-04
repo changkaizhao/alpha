@@ -139,7 +139,7 @@ class TicTacToeSocketHandler(WebSocketHandler):
         try:
             self.write_message(json.dumps(message))
         except WebSocketClosedError:
-            logger.warning("WS_CLOSED", "Could Not send Message: " + json.dumps(message))
+            logger.warning("WS_CLOSED , Could Not send Message: " + json.dumps(message))
             # Send Websocket Closed Error to Paired Opponent
             self.send_pair_message(action="pair-closed")
             self.close()

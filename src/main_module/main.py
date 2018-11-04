@@ -23,7 +23,7 @@ from tornado.options import options, parse_config_file
 # from main_module.handlers import MainHandler
 
 from tic_tac_toe.config import settings
-from tic_tac_toe.game_manager import TicTacToeGameManager
+from tic_tac_toe.game_manager import GameManager
 from tic_tac_toe.handlers import IndexHandler, TicTacToeHandler, TicTacToeSocketHandler
 
 
@@ -36,7 +36,7 @@ def normal_response(data):
     return {"error": None, "data": data}
 
 def make_app():
-    tic_tac_toe_game_manager = TicTacToeGameManager()
+    tic_tac_toe_game_manager = GameManager()
 
     return tornado.web.Application([
         # (r"/", MainHandler),
