@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+#lib/
 lib64/
 parts/
 sdist/
@@ -90,6 +90,7 @@ ENV/
 env.bak/
 venv.bak/
 
+.idea/
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -98,7 +99,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+#/site
 
 # mypy
 .mypy_cache/
