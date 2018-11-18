@@ -1,0 +1,45 @@
+2018-11-03 00:22:58,170 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.12ms
+2018-11-03 02:22:50,514 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.13ms
+2018-11-03 03:18:35,812 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.89ms
+2018-11-03 03:21:25,568 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.63ms
+2018-11-03 03:21:26,319 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/normalize.css'
+2018-11-03 03:21:26,320 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/skeleton.css'
+2018-11-03 03:21:26,320 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/jquery-3.1.0.min.js'
+2018-11-03 03:21:26,321 - tornado.access - INFO - 200 GET /tic-tac-toe (172.17.0.2) 4.68ms
+2018-11-03 03:38:51,815 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.82ms
+2018-11-03 03:45:03,856 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.11ms
+2018-11-03 05:34:41,862 - tornado.access - INFO - 302 GET / (196.52.43.58) 1.68ms
+2018-11-03 06:35:37,704 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.93ms
+2018-11-03 07:32:17,033 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.17ms
+2018-11-03 09:09:17,563 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.54ms
+2018-11-03 09:41:53,695 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.77ms
+2018-11-03 11:20:21,046 - tornado.access - WARNING - 405 HEAD / (172.17.0.2) 3.46ms
+2018-11-03 12:19:41,803 - tornado.access - WARNING - 404 GET /admin/assets/js/views/login.js (172.17.0.2) 1.49ms
+2018-11-03 12:30:08,482 - tornado.access - INFO - 302 GET / (107.170.217.188) 2.05ms
+2018-11-03 12:36:09,506 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.84ms
+2018-11-03 13:24:15,222 - tornado.access - INFO - 302 GET / (185.53.91.26) 0.70ms
+2018-11-03 13:24:15,415 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/normalize.css'
+2018-11-03 13:24:15,415 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/skeleton.css'
+2018-11-03 13:24:15,415 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/jquery-3.1.0.min.js'
+2018-11-03 13:24:15,417 - tornado.access - INFO - 200 GET /tic-tac-toe (185.53.91.26) 13.42ms
+2018-11-03 13:24:15,783 - tornado.access - INFO - 302 GET / (185.53.91.26) 0.65ms
+2018-11-03 13:24:15,968 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/normalize.css'
+2018-11-03 13:24:15,968 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/skeleton.css'
+2018-11-03 13:24:15,968 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/jquery-3.1.0.min.js'
+2018-11-03 13:24:15,968 - tornado.access - INFO - 200 GET /tic-tac-toe (185.53.91.26) 4.05ms
+2018-11-03 13:24:16,334 - tornado.access - INFO - 302 GET / (185.53.91.26) 0.47ms
+2018-11-03 13:24:16,519 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/normalize.css'
+2018-11-03 13:24:16,519 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/skeleton.css'
+2018-11-03 13:24:16,519 - tornado.general - ERROR - Could not open static file '/alpha/src/tic_tac_toe/static/lib/jquery-3.1.0.min.js'
+2018-11-03 13:24:16,520 - tornado.access - INFO - 200 GET /tic-tac-toe (185.53.91.26) 3.64ms
+2018-11-03 15:27:16,436 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.35ms
+2018-11-03 16:25:12,249 - tornado.access - INFO - 302 GET / (172.105.238.87) 1.05ms
+2018-11-03 20:05:36,808 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.06ms
+2018-11-03 20:05:37,286 - tornado.access - WARNING - 404 GET /webdav (172.17.0.2) 3.63ms
+2018-11-03 20:28:09,783 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.77ms
+2018-11-03 21:27:45,525 - tornado.access - WARNING - 405 POST / (203.24.188.100) 1.13ms
+2018-11-03 21:27:45,526 - tornado.general - INFO - Malformed HTTP message from 203.24.188.100: Malformed HTTP request line
+2018-11-03 22:05:48,536 - tornado.access - WARNING - 405 POST / (203.24.188.81) 0.95ms
+2018-11-03 22:05:48,536 - tornado.general - INFO - Malformed HTTP message from 203.24.188.81: Malformed HTTP request line
+2018-11-03 22:32:27,231 - tornado.access - INFO - 302 GET / (172.17.0.2) 0.84ms
+2018-11-03 23:17:14,728 - tornado.access - INFO - 302 GET / (172.17.0.2) 1.08ms
